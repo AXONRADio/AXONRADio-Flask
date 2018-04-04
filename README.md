@@ -2,5 +2,5 @@
 Flask web app for AXONRADio
 
 ## To Run
-pip install flask
-python axonradio.py
+1. pip install flask
+2. python axonradio.py
