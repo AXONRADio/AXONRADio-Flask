@@ -17,16 +17,17 @@ HTML_TEMPLATE = Template("""
    <title>My Video App</title>
 </head>
 <body>
+    <h1>AXONRADio</h1>
     <h2>${headline}</h2>
 
-    <iframe src="https://www.youtube.com/embed/${youtube_id}?autoplay=1" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/${youtube_id}?autoplay=1" width="640" height="480" frameborder="0" allowfullscreen></iframe>
 </body>""")
 
 
 @app.route("/")
 def index():
     if 'username' in session:
-        return 'You are logged in as ' + session['username']
+        return 'You are logged in as ' + session['username'] + '<br><a href="http://localhost:5000/videos/ohQPySWJToo">To Videos Page</a>'
 
     return render_template('index.html')
 
